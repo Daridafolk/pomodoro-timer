@@ -60,9 +60,9 @@
         };
 
         pomodoroButton.addEventListener('click', () => {
-            breakButton.classList.add('active');
-            pomodoroButton.classList.remove('active');
-            switchToPo();
+            pomodoroButton.classList.add('active');
+            breakButton.classList.remove('active');
+            switchToPomodoro();
         });
 
         breakButton.addEventListener('click', () => {
@@ -76,4 +76,5 @@
         });
 
         startButton.addEventListener('click', startTimer);
+
         updateDisplay();
