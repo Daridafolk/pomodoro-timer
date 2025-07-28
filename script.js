@@ -3,6 +3,8 @@
         let timeLeft = 25 * 60;
         const pomodoroDuration = 25 * 60;
         const breakDuration = 5 * 60;
+        let mode = 'pomodoro';
+
         
         const timeDisplay = document.getElementById('pomodoro-time');
         const startButton = document.getElementById('start');
@@ -42,18 +44,20 @@
         function resetTimer() {
             clearInterval(timer);
             isRunning = false;
-            timeLeft = pomodoroDuration;
+            timeLeft = mode === 'pomodoro' ? pomodoroDuration : breakDuration;
             updateDisplay();
             startButton.textContent = 'Start';
         };
 
         function switchToPomodoro() {
+            mode = 'pomodoro';
             timeLeft = pomodoroDuration;
             updateDisplay();
             stopTimer();
         };
 
         function switchToBreak() {
+            mode = 'break';
             timeLeft = breakDuration;
             updateDisplay();
             stopTimer();
