@@ -8,7 +8,9 @@ body {
 body {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 600;
-  background: url("./img/bg.png");
+  background-image: url("./img/background_6.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,8 +28,12 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, .5);
+  background: rgba(0, 0, 0, 0.112);
   z-index: 0;
+}
+
+.gif-cake {
+  margin-top: 30px;
 }
 
 .pomodoro-options {
